@@ -1,5 +1,3 @@
-const cart = JSON.parse(localStorage.getItem("cart"));
-
 // generate table html
 // then update inner html (caption, element, array of objects)
 
@@ -8,6 +6,18 @@ const cart = JSON.parse(localStorage.getItem("cart"));
 
 //caption, element, array, id, classes
 function generateTable( tableMaker ) {
+    /*
+    //caption, element, array, id, classes
+    generateTable({"caption": getCaption(key),
+                    "element": key, // property
+                    "array": currObj, // array of objects
+                    "id": key, //name of id you want to put on there
+                    "classes": "red", // class you want to put on there
+                    "footerTotal": "$15"});
+
+    }
+
+    */
     
     let tbody = "";
     let thead = "";
@@ -52,8 +62,8 @@ function generateTable( tableMaker ) {
     //   ${tfoot}
     // </table>
 //   `    
-  document.getElementById(tableMaker.element).innerHTML = `
-      <table id="${tableMaker.id}">
+  document.getElementById("table-" + tableMaker.element).innerHTML = `
+      <table id="${tableMaker.id}" class="${tableMaker.classes}">
       <colgroup>
         <col style="width:50%">
         <col style="width:25%">
@@ -67,25 +77,3 @@ function generateTable( tableMaker ) {
 
 }
 
-for (let key in productsDB) {
-    const currObj = productsDB[key];
-
-   //caption, element, array, id, classes
-   generateTable({"caption": getCaption(key),
-                 "element": key, "array": currObj, 
-                        "id": key, "classes": "red",
-                    "footerTotal":"$15"});
-
-}
-
-function getCaption(key) {
-    // create the caption
-    let caption = key;
-    switch (key) {
-        case "training":
-            caption = "This is training"
-        default:
-            break;
-    }
-    return caption;
-}
