@@ -1,0 +1,86 @@
+/* --- Grid Layout --- */
+
+.table-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  grid-template-columns: repeat(3, 1fr);  
+  grid-gap: 20px;
+  grid-template-areas: 
+    "items supplies add-ons"
+    ". . total";
+}
+
+#table-supplies {
+  grid-area: supplies;
+}
+
+#table-items {
+  grid-area: items;
+}
+
+#table-total {
+  grid-area: total;
+}
+
+#table-addOns {
+  grid-area: add-ons;
+}
+
+table {
+    /* min-width: 80%; */
+    max-width: 960px;
+    margin: 10px auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  caption {
+    text-align: left;
+    font-size: 1.6em;
+    font-weight: 400;
+    padding: 10px 10px 10px 20px;
+  }
+  
+
+  thead th {
+    font-weight: 400;
+    background: black;
+    color: #FFF;
+    padding: 10px 10px 10px 20px;
+
+  }
+  
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+  }
+  
+  tr:nth-child(even) {
+    background: #c6c6c6;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    font-weight: 300;
+    min-width: 25px;
+    border-top: 1px solid black;
+  }
+  
+  tfoot tr {
+    background: none;
+  }
+
+ 
+  
+  tfoot th,
+  tfoot td {
+    padding: 10px 10px 10px 20px;
+    padding-left: 20px;
+    font-size: 1em;
+    /* font-style: italic; */
+    text-align: left;
+    color: black;
+  }
+  
