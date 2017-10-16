@@ -84,4 +84,7 @@ let calcTotal = () => {
 };
 
 updateTablesOnPage();
+let updateNarrative = (function(){
+    document.getElementById("sample-move-narrative").innerHTML = samplePageNarrative;
+}()); 
 document.getElementById("table-move-total").innerHTML = "$" + calcTotal();

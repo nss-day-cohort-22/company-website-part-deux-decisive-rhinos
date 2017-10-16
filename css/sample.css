@@ -2,12 +2,12 @@
 
 .table-container {
   display: grid;
-  grid-template-rows: 1fr 1fr; 
+  grid-template-rows: 3fr 1fr; 
   grid-template-columns: repeat(3, 1fr);  
   grid-gap: 20px;
   grid-template-areas: 
     "items supplies add-ons"
-    ". . total";
+    "total total total";
 }
 
 #table-supplies {
@@ -24,6 +24,26 @@
 
 #table-addOns {
   grid-area: add-ons;
+}
+
+/* Total */
+.sample-total {
+  font-size: 2em;
+}
+
+/* Narrative */
+.sample-narrative {
+  padding: 10px 30px 20px 30px;
+}
+
+.sample-narrative h1 {
+  border-bottom: solid 1px black;
+  padding-bottom: 20px;
+}
+
+.sample-narrative p {
+  margin: 0;
+
 }
 
 table {
