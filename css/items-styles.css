@@ -6,11 +6,23 @@ body {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-template-rows: 140px repeat(2, minmax(auto, 40%));
     grid-template-areas: 
-    "header header"
-    "main main";
+    "header"
+    "main";
+}
+
+.item-header {
+    grid-area: header;
+    text-align: center;
+}
+
+#item-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, minmax(auto, 40%));
+    grid-area: main;
 }
 
 .button {
@@ -23,7 +35,6 @@ body {
     -moz-box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
     -webkit-box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
     box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
-    
 }
 
 .num-input {
@@ -34,19 +45,13 @@ body {
     font-size: 1em;
 }
 
-.header {
-    grid-area: header;
-    text-align: center;
-    
-}
-
 .item {
     background-color: lightgrey;
     border-radius: 8px;
     padding: 5px 20px;
     margin: 5px auto;
     min-width: 15em; 
-    /* grid-area: main; */
+    
 }
 
 .item img {
@@ -61,8 +66,31 @@ body {
     -moz-box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
     -webkit-box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
     box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
- }
+}
 
 p {
     margin: .3em .2em;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #item-content {
+        width: 85%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-auto-flow: row;
+        grid-template-rows: auto;
+        align-items: start;
+       
+    }
+    
+    .item-header {
+       
+    }
+
+    
+    
 }

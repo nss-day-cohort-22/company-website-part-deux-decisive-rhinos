@@ -7,7 +7,7 @@ body {
     display: grid;
     min-height: 100vh;
     /* grid-template-columns: 1fr; */
-    grid-template-rows: 50px minmax(500px, 1fr) 50px; 
+    grid-template-rows: 100px minmax(500px, 1fr) 50px; 
     /* grid-gap: 10px; */
     grid-template-areas: 
     "header"
@@ -30,3 +30,19 @@ body {
 
 }
 
+/* 
+@media screen and max-size(900px) {
+    .main-global {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px minmax(500px, 1fr) 50px; 
+        /* grid-gap: 10px; */
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+
+
+} */

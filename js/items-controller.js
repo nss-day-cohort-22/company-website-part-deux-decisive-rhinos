@@ -4,7 +4,6 @@ console.log(retrievedItems.description["items-description"])
 
 let itemsViewerEl = document.getElementById("items-viewer");
 
-
 // function to capatilize the first letter of a string
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -14,11 +13,15 @@ function capitalizeFirstLetter(string) {
 // post description to article tag in html doc, one time, so no loop.
 
 itemsViewerEl.innerHTML += `
-<header class="header">
+<header class="item-header">
     <h1> What Size Rhinocerus Statue Do You Need to Move?</h1>
     <p>${retrievedItems.description["items-description"]}</p>
 </header>
+<section id="item-content">
+</section> 
 `;
+
+let itemContentEl = document.getElementById("item-content");
 
 
 // loop through array of items
@@ -28,7 +31,7 @@ for (var i = 0; i < itemsArray.length; i++) {
     var item = itemsArray[i];
     
     // setting html code to push into the items-viewer container
-    itemsViewerEl.innerHTML += `
+    itemContentEl.innerHTML += `
     <article class="item">
     <a href="${item.picture}" target="_blank" alt="${item.name} Rhino sculpture"><img src="${item.picture}" width="300" class="shadow"></a>
     <p>${capitalizeFirstLetter(item.name)} item:
