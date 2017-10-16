@@ -41,8 +41,8 @@ function generateTable( tableMaker ) {
         tbody += `
           <tr>
             <th>${obj.name}</th>
-            <td>1</td>
-            <td>$10</td>
+            <td>${obj.qty}</td>
+            <td>$${obj.price}</td>
           </tr>
         `;
     }
@@ -52,7 +52,7 @@ function generateTable( tableMaker ) {
         <tfoot>
             <th>Subtotal</th>
             <td></td>
-            <td>${tableMaker.footerTotal}</td>
+            <td>$${tableMaker.footerTotal}</td>
         </tfoot>
     `
     // let html = `

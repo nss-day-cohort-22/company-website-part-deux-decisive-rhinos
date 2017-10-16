@@ -1,5 +1,33 @@
+/* --- Grid Layout --- */
+
+.table-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  grid-template-columns: repeat(3, 1fr);  
+  grid-gap: 20px;
+  grid-template-areas: 
+    "items supplies add-ons"
+    ". . total";
+}
+
+#table-supplies {
+  grid-area: supplies;
+}
+
+#table-items {
+  grid-area: items;
+}
+
+#table-total {
+  grid-area: total;
+}
+
+#table-addOns {
+  grid-area: add-ons;
+}
+
 table {
-    min-width: 80%;
+    /* min-width: 80%; */
     max-width: 960px;
     margin: 10px auto;
     border-collapse: collapse;
@@ -36,7 +64,7 @@ table {
     text-align: left;
     padding: 10px 10px 10px 20px;
     font-weight: 300;
-    min-width: 100px;
+    min-width: 25px;
     border-top: 1px solid black;
   }
   
