@@ -16,9 +16,23 @@
     grid-area: distance;
 }
 */
+/*
+.boxy {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.boxsize {
+    border: 5px solid black;
+    width: 100%;
+    margin: 4px;
+    text-align: center;
+}
+*/
 
 #options {
-    margin: 35%;
+    margin: 25%;
 }
 
 

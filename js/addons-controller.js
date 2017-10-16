@@ -8,10 +8,9 @@ for (let addOnKey in storedAddOns) {
     const addOnType = storedAddOns[addOnKey]
     
     addOnTag.innerHTML += `
-    <section class= "${addOnKey}">
+    <section class= "${addOnKey} boxsize">
         <h2>${addOnKey}</h2>
-        <form action="">
-        <ul>
+        <form class="blox" action="">
         `
             for (let i=0; i < addOnType.length; i++) {
                 let entry=addOnType[i];
