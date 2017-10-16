@@ -1,13 +1,24 @@
-// define the entries for the addons
-const addons = {
-    "name": addonsName,
-    "price": addonsPrice,
-    "quantity": addonsQuantity
+// define Insurance options
+const insurance = [
+    "$50,000 total value",
+    "$100,000 total value",
+    "$250,000 total value",
+    "$500,000 total value",
+    "$1,000,000 total value"
+]
+
+const distance = [
+    "within Davidson county",
+    "adjacent county",
+    "non-adjacent county within Tennessee"
+]
+
+// populate the addOns database with the arrays
+const addOns = {
+    "Insurance":      insurance,
+    "Distance":       distance,
 }
 
-// populate addons database with enties
-addons.push()
-
-// convert addons database into string saved in browser memory
-const addonsString = JSON.stringify(addons)
-localStorage.setItem("addons", addonsString)
+// convert addOns database into string saved in browser memory
+const addOnsString = JSON.stringify(addOns)
+localStorage.setItem("addOns", addOnsString)
