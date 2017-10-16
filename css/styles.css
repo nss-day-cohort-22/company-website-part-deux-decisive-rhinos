@@ -1,0 +1,32 @@
+body {
+
+    margin: 0;
+    padding: 0;
+}
+
+.main-global {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px minmax(200px, 1fr) 50px;
+    /* grid-gap: 10px; */
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header-global {
+    grid-area: header;
+    background: black;
+}
+
+.main-global {
+    grid-area: main;
+}
+
+.footer-global {
+    grid-area: footer;
+    background: black;
+}
+
