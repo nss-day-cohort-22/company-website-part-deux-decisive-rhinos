@@ -5,10 +5,10 @@ body {
 }
 
 .main-global {
-    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px minmax(200px, 1fr) 50px;
+    min-height: 100vh;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: 50px minmax(500px, 1fr) 50px; 
     /* grid-gap: 10px; */
     grid-template-areas: 
     "header"
@@ -28,5 +28,6 @@ body {
 .footer-global {
     grid-area: footer;
     background: black;
+
 }
 
