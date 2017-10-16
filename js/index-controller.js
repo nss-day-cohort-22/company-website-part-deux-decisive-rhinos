@@ -4,6 +4,6 @@ let indexMarker = document.getElementById("indexId")
 
 for (let i = 0; i < storedIndex.length; i++) {
     let currentIndex = storedIndex[i]
-    indexMarker.innerHTML += `<div class="indexDisplay"><p>${currentIndex.title}</p>
+    indexMarker.innerHTML += `<div id="index"><p>${currentIndex.title}</p>
     <p>${currentIndex.extra}</p></div>`
 } 

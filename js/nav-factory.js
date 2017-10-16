@@ -18,7 +18,7 @@ let sampleTab = {
     "link": "sample.html"
 }
 
-let navArray =[suppliesTab, itemsTab, addonsTab, sampleTab]
+let navArray =[itemsTab, suppliesTab, addonsTab, sampleTab]
 
 let navString = JSON.stringify(navArray)
 localStorage.setItem("navItems", navString)

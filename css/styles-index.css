@@ -1,3 +1,12 @@
-indexDisplay {
-    
+.index-container {
+    display: subgrid;
+    grid-template-rows: 20% 40% 40%; 
+    grid-template-areas: "about"
 }
+
+#index {
+    grid-area: about;
+    grid-row-start: row2-start;
+    grid-row-end: 3;
+}
+
