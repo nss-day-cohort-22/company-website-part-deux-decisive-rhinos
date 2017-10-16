@@ -1,3 +1,17 @@
+// Populate the nav-bar
+
+let storedNav = JSON.parse(localStorage.getItem("navItems"))
+
+let navMarker = document.getElementById("nav")
+
+for (let i = 0; i < storedNav.length; i++) {
+    let currentTab = storedNav[i]
+    if (true) {
+            navMarker.innerHTML += `<li>${storedNav[i]}</li>`
+    }
+}
+
+
 // check for cart and redirect to home page if it doesn't exist
 
 const cart = JSON.parse(localStorage.getItem("cart"));
