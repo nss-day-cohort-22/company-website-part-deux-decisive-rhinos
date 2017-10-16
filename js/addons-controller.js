@@ -11,6 +11,7 @@ for (let addOnKey in storedAddOns) {
     <section class= "${addOnKey}">
         <h2>${addOnKey}</h2>
         <form action="">
+        <ul>
         `
             for (let i=0; i < addOnType.length; i++) {
                 let entry=addOnType[i];

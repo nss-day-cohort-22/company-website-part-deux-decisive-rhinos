@@ -1,21 +1,31 @@
 /* 
 #options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-columns: repeat(2, 1fr);  
+    grid-gap: 20px;
+    grid-template-areas: 
+        "insurance distance";
 }
 
 .Insurance {
-    border: 5px solid black;
-    width: 40%;
-    margin: 4px;
-    text-align: center;
+    grid-area: insurance;
 }
 
 .Distance {
-    border: 5px solid black;
-    width: 40%;
-    margin: 4px;
-    text-align: center;
+    grid-area: distance;
 }
- */
+*/
+
+#options {
+    margin: 35%;
+}
+
+
+.Insurance {
+    background: gray;
+}
+
+.Distance {
+    background: gray;
+}
