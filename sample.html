@@ -4,13 +4,19 @@
         <title>Sample Budget</title>
         <link rel='stylesheet' href='./css/styles.css'>
         <link rel='stylesheet' href='./css/sample.css'>
+        <link rel='stylesheet' href='./css/styles-index.css'>
     </head>
     <body>
     <main class="main-global">
         <header class="header-global">
-            <ul id="nav">
+            <div class="header-global brand">
+                <a href="./index.html">Rhinos Move Rhinos</a>
+            </div>
+            <nav>
+            <ul id="nav" class="header-global nav-container">
                 
             </ul>
+            </nav>
         </header> 
             <div id="results-main-content">
                 <div class="sample-narrative">
@@ -50,6 +56,9 @@
         <footer class="footer-global">
         </footer>
     </main>
+    
+    <script src="./js/nav-factory.js"></script> 
+    <script src="./js/nav-controller.js"></script> 
     <script src="./js/sample-tables.js"></script>
     <script src="./js/sample-factory.js"></script>
     <script src="./js/sample-controller.js"></script>
