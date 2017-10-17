@@ -7,7 +7,12 @@
     "about"; 
 }
 
+.standout {
+    background-color: rgba(221, 226, 226, 0.514)
+}
+
 .buttonBox {
+    font-size: 2em;
     text-align: center;
     grid-area: button;
     background-image: url('http://i63.tinypic.com/qzlpvb.jpg');
@@ -17,6 +22,7 @@
 .aboutBox {
     text-align: center;
     grid-area: about;
+    font-size: 1.5em;
 }
 
 .brand {

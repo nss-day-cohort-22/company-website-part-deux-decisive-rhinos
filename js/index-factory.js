@@ -1,5 +1,5 @@
 let infoButton = {
-    "title": "Let us move your Rhinos, Today",
+    "title": "<p class='standout'>Let us move your Rhinos, Today</p>",
     "extra": "buttonfunction1()",
     "class": "buttonBox",
     "subclass": "buttonStyle" 
