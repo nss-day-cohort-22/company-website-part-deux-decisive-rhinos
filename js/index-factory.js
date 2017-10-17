@@ -1,11 +1,15 @@
 let infoButton = {
-    "title": "Prepare to Git Wrecked By Rhinos",
-    "extra": "I'm Not Kidding"
+    "title": "Let us move your Rhinos, Today",
+    "extra": "<button>Lets Party</button>",
+    "class": "buttonBox",
+    "subclass": "buttonStyle" 
 }
 
 let aboutSection = {
     "title": "Seriously are you ready to move bro?",
-    "extra": "Because we GOT you!"
+    "extra": "Because we GOT you!",
+    "class": "aboutBox",
+    "subclass": "aboutStyle"
 }
 
 let indexObjects = [infoButton, aboutSection]
