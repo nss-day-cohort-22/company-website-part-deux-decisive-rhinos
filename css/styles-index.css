@@ -1,12 +1,62 @@
 .index-container {
-    display: subgrid;
-    grid-template-rows: 20% 40% 40%; 
-    grid-template-areas: "about"
+    display: grid;
+    grid-template-rows: 50px 50% 50%;
+    grid-template-areas:
+    "top"
+    "button"
+    "about"; 
 }
 
-#index {
+.buttonBox {
+    text-align: center;
+    grid-area: button;
+    background-image: url('http://i63.tinypic.com/qzlpvb.jpg');
+    background-size: cover;
+}
+
+.aboutBox {
+    text-align: center;
     grid-area: about;
-    grid-row-start: row2-start;
-    grid-row-end: 3;
 }
 
+.nav-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns:25% 1fr 1fr 1fr 1fr 25%;
+    justify-content: center;
+    grid-gap: 5px;
+    grid-template-areas:
+    "empty items supplies add-ons sample empty2";
+}
+
+.suppliesClass {
+    grid-area: supplies;
+    padding: 2px;
+    border: 1px solid red;
+}
+
+.itemsClass {
+    grid-area: items;
+    padding: 2px;
+    border: 1px solid navajowhite;
+}
+
+.addonsClass {
+    grid-area: add-ons;
+    padding: 1px;
+    border: 1px solid green;
+}
+
+.sampleClass {
+    grid-area: sample;
+    padding: 1px;
+    border: 1px solid yellow;
+}
+
+.buttonStyle {
+    margin: auto;
+}
+
+.aboutStyle {
+    margin: auto;
+}
