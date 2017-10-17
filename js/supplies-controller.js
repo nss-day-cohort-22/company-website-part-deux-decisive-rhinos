@@ -28,10 +28,12 @@ for(let key in supplyObject) {
 
         //This code appends additional html to the constant named "supplyElement" created earlier. The initial "+=" is necessary to loop thru all items in a property
         supplyElement.innerHTML += `
-            <div>
+            <div class='product-grid'>
             <img src='${currentSupply.image}' style= 'width:200px; height:200px;' >
-            <p> ${currentSupply.name} </p>
-            <p> $${currentSupply.price} </p>
+            <div class='name'> ${currentSupply.name} </div>
+            <div class='info'> $${currentSupply.price} 
+            <input type='submit' value='Add to Cart'> 
+            </div>
             </div>
         `;
 
