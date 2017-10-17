@@ -10,16 +10,16 @@ for (let addOnKey in storedAddOns) {
     addOnTag.innerHTML += `
     <section class= "${addOnKey} boxsize">
         <h2>${addOnKey}</h2>
-        <form class="blox" action="">
+        <ul class="blox" action="">
         `
             for (let i=0; i < addOnType.length; i++) {
                 let entry=addOnType[i];
                 addOnTag.innerHTML += `
-                    <input type="radio" name="insAdd" value="insValue"> ${entry} <br>
+                    <li class="item"> ${entry} <br>
                 `
             }
     addOnTag.innerHTML += `
-        </form>
+        </ul>
     </section>
     `          
 }    

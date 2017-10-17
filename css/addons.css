@@ -1,3 +1,30 @@
+h2 {
+    margin: 8% 25% 1%;
+    text-align: center;
+}
+
+#options {
+    margin: 5% 28% 1px;
+
+}
+
+
+.Insurance {
+    background: gray;
+}
+
+.Distance {
+    background: gray;
+}
+
+.item {
+    margin-top: 1px;
+    list-style: none;
+    text-align: center;
+    background: lightgray;
+    /* border: 1px solid black; */
+}
+
 /* 
 #options {
     display: grid;
@@ -30,16 +57,3 @@
     text-align: center;
 }
 */
-
-#options {
-    margin: 25%;
-}
-
-
-.Insurance {
-    background: gray;
-}
-
-.Distance {
-    background: gray;
-}

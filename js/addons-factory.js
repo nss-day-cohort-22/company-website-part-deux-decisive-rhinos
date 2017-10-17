@@ -1,16 +1,16 @@
 // define Insurance options
 const insurance = [
-    "$50,000 total value",
-    "$100,000 total value",
-    "$250,000 total value",
-    "$500,000 total value",
-    "$1,000,000 total value"
+    "$50,000 total value     ADD    $50",
+    "$100,000 total value     ADD   $100",
+    "$250,000 total value     ADD   $250",
+    "$500,000 total value     ADD   $500",
+    "$1,000,000 total value     ADD $1,000"
 ]
 
 const distance = [
-    "within Davidson county",
-    "adjacent county",
-    "non-adjacent county within Tennessee"
+    "within Davidson county     ADD   $500",
+    "adjacent county     ADD   $750",
+    "non-adjacent county within Tennessee     ADD $1,000"
 ]
 
 // populate the addOns database with the arrays
