@@ -4,8 +4,10 @@
     margin: 0 auto;
     margin-bottom: 15px;
     display: grid;
+    /* sets the number of columns to 1, spanning the full width of container */
     grid-template-columns: 100%;
     justify-items: center;
+    /* names and orders of the grid items */
     grid-template-areas: 
     "header"
     "main";   
@@ -14,6 +16,7 @@
 .items-header {
     grid-area: header;
     text-align: center;
+    margin-bottom: 2em;
 }
 
 /* Sets the container that holds the individual items to a grid with 2 columns, each 50% of the size of the container */
@@ -83,20 +86,15 @@ p {
     #item-content {
         width: 90%;
         max-width: 100%;
-        margin: 0 auto;
-        margin-top: 15px;
+        margin: 10px auto 0;
         display: grid;
-        grid-template-columns: 100% ; 
-        grid-auto-flow: row;
-        grid-row-gap: 2px;
+        grid-template-columns: 100%; 
         grid-template-rows: auto;
-        align-items: start;
+        grid-auto-flow: row;
     }
 
     .items-header {
-        display: grid;
-        grid-template-columns: 100% ;
-        grid-auto-flow: row;
+        margin-bottom: .8em;
     }
 
     /* enlarges each product item when stacked in one column and makes the size responsive to the viewport size */
@@ -120,5 +118,9 @@ p {
 
     .items-header p, .item p {
         font-size: .9em;
+    }
+
+    .items-header {
+        margin-bottom: .3em;
     }
 }
