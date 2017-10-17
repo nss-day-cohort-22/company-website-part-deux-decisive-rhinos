@@ -1,6 +1,6 @@
 let infoButton = {
-    "title": "Let us move your Rhinos, Today",
-    "extra": "<button>Lets Party</button>",
+    "title": "Let us move your Rhinos Statues with Rhinos, Today",
+    "extra": "<button>Start the Party</button>",
     "class": "buttonBox",
     "subclass": "buttonStyle" 
 }
