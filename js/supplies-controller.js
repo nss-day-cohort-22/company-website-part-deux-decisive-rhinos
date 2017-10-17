@@ -26,8 +26,15 @@ for(let key in supplyObject) {
         //Create a variable named "currentSupply" that stores all property and property values of each array within the object "supplyObject"
         let currentSupply = supplyObject[key][i];
 
-        //This code appends additional html to the constant named "supplyElement" created earlier.
-        supplyElement.innerHTML += currentSupply.name;
+        //This code appends additional html to the constant named "supplyElement" created earlier. The initial "+=" is necessary to loop thru all items in a property
+        supplyElement.innerHTML += `
+            <div>
+            <img src='${currentSupply.image}' style= 'width:200px; height:200px;' >
+            <p> ${currentSupply.name} </p>
+            <p> $${currentSupply.price} </p>
+            </div>
+        `;
+
 
     }
 
