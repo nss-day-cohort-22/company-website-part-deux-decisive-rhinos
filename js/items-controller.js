@@ -1,8 +1,8 @@
 // retrieve database from local storage
-const retrievedItems = JSON.parse(localStorage.getItem("itemsString"));
+const retrievedItemsDatabase = JSON.parse(localStorage.getItem("itemsDatabaseString"));
 
 // console log the database for structure reference and to check it was properly retrieved
-// console.log(retrievedItems);
+console.log(retrievedItemsDatabase);
 
 // get control of container elements in items.html and assign to variables
 let itemsHeaderEl = document.getElementById("items-header");
@@ -16,25 +16,25 @@ function capitalizeFirstLetter(string) {
 // post description to article tag in html doc, one time, so no loop.
 itemsHeaderEl.innerHTML += `
     <h1> What Size Rhinocerus Statue Do You Need to Move?</h1>
-    <p>${retrievedItems.description["items-description"]}</p>
+    <p>${retrievedItemsDatabase.description["items-description"]}</p>
 `
 
 
 // loop through array of product items
-let itemsArray = retrievedItems.items;
+let arrayOfProducts = retrievedItemsDatabase.products;
 
-for (var i = 0; i < itemsArray.length; i++) {
-    var item = itemsArray[i];
+for (var i = 0; i < arrayOfProducts.length; i++) {
+    var product = arrayOfProducts[i];
     
     // setting html code to push into the items-content container
     itemContentEl.innerHTML += `
     <article class="item">
-    <a href="${item.picture}" target="_blank" alt="${item.name} Rhino sculpture"><img src="${item.picture}" width="300" class="shadow"></a>
-    <p>${capitalizeFirstLetter(item.name)} item:
-    <input type="number" name="${item.name}-item" size="4" class="num-input" id="${item.name}-item-quantity">
-    <button class=button id="${item.name}-item">Add to Cart</button>
-    </p>
-    <p>Price: $${item.price}</p>
+    
+    ${capitalizeFirstLetter(product.name)} item:
+    <p>Price: $${product.price}</p>
+    <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
+    <button class=button id="${product.name}-item">Add to Cart</button>
+    
     </article>
     `   
 }

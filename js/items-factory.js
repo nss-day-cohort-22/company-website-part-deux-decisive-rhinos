@@ -1,35 +1,31 @@
 // check to see if itemsDatabaseString already exists in local Storage
 
-if (localStorage.getItem("itemsDatabaseString") !== null) {
-  // let items-controller.js file handle database that already exists    
-} 
-else {
-    // generate new items database
+// if (localStorage.getItem("itemsDatabaseString") !== null) {
+//   // let items-controller.js file handle database that already exists    
+// } 
+// else {
+//     // generate new items database
 
-    const items = {};
-    const itemsArray = [];
+    const itemsDatabase = {};
+    const productsArray = [];
 
     const smallItem = {
         "name": "small",
         "price": 30,
-        "picture": "/images/Rhino_small_web.jpg"
     }
 
     const mediumItem = {
         "name": "medium",
         "price": 75,
-        "picture": "/images/Rhino_med_web.jpg"
     }
 
     const largeItem = {
         "name": "large",
         "price": 250,
-        "picture": "/images/Rhino_large_web.jpg"
     }
     const extraLargeItem = {
         "name": "XL",
         "price": 1500,
-        "picture": "/images/Rhino_xl_web.jpg"
     }
 
     const description = {
@@ -37,15 +33,15 @@ else {
     }
 
     // push each product item into an array of items
-    itemsArray.push(smallItem, mediumItem, largeItem, extraLargeItem);
+    productsArray.push(smallItem, mediumItem, largeItem, extraLargeItem);
     // add the itemsArray to the items object
-    items.items = itemsArray;
+    itemsDatabase.products = productsArray;
     // add the description content to the items object
-    items.description = description;
+    itemsDatabase.description = description;
 
     // store items database in local storage
-    let itemsString = JSON.stringify(items);
-    localStorage.setItem("itemsString", itemsString);
+    let itemsDatabaseString = JSON.stringify(itemsDatabase);
+    localStorage.setItem("itemsDatabaseString", itemsDatabaseString);
 
-} // end of else statement from checking if local storage exists, on or near line 6
+//} // end of else statement from checking if local storage exists, on or near line 6
 
