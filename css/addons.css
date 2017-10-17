@@ -4,10 +4,9 @@ h2 {
 }
 
 #options {
-    margin: 1px 28% 1px;
-
+    margin-left: 28%;
+    margin-right: 28%;
 }
-
 
 .Insurance {
     background: gray;
@@ -22,38 +21,4 @@ h2 {
     list-style: none;
     text-align: center;
     background: lightgray;
-    /* border: 1px solid black; */
 }
-
-/* 
-#options {
-    display: grid;
-    grid-template-rows: 1fr 1fr; 
-    grid-template-columns: repeat(2, 1fr);  
-    grid-gap: 20px;
-    grid-template-areas: 
-        "insurance distance";
-}
-
-.Insurance {
-    grid-area: insurance;
-}
-
-.Distance {
-    grid-area: distance;
-}
-*/
-/*
-.boxy {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.boxsize {
-    border: 5px solid black;
-    width: 100%;
-    margin: 4px;
-    text-align: center;
-}
-*/
