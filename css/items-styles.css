@@ -1,7 +1,6 @@
 
  
  
- 
  /* sets main content area of items page to a grid with css grid. This container is set to 1 column and 2 rows; header & main. */
 #items-viewer {
     width: 80%;
