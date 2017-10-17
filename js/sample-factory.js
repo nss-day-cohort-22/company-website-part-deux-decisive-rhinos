@@ -2,11 +2,11 @@
 
 //build shopping car
 
-//const cartExists = JSON.parse(localStorage.getItem("cart")) !== null;
-const cartExists = false;
+const cartExists = JSON.parse(localStorage.getItem("cart")) !== null;
+//const cartExists = false;
     
 if (cartExists){
-    console.log("cart exists");
+    //console.log("cart exists");
 } else {
 
     const itemA = {

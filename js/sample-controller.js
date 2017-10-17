@@ -5,7 +5,7 @@ let navMarker = document.getElementById("nav")
 for (let i = 0; i < storedNav.length; i++) {
     let currentTab = storedNav[i]
     navMarker.innerHTML += `<li><a href="${currentTab.link}">${currentTab.title}</a></li>`
-    console.log(currentTab.title) 
+
 }
 
 // check for cart and redirect to home page if it doesn't exist
