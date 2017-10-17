@@ -10,49 +10,50 @@ if (cartExists){
 } else {
 
     const itemA = {
-        "name": "MovingItemA",
-        "price": 10,
-        "qty": 2,
+        "name": "Small Rhino",
+        "price": 30,
+        "qty": 7,
         "type": "item"
     }
     const itemB = {
-        "name": "MovingItemB",
-        "price": 10,
+        "name": "Med Rhino",
+        "price": 75,
         "qty": 1,
         "type": "item"
     }
-    const itemC = {
-        "name": "MovingItemC",
-        "price": 10,
-        "qty": 1,
-        "type": "item"
-    }
+    
 
-    const supplyA = {
-        "name": "SupplyA",
-        "price": 20,
+    const medPackingMaterial = {
+        "name": "Med Packing Materials",
+        "price": 100,
         "qty": 1,
         "type": "supply"
     }
 
-    const supplyB = {
-        "name": "SupplyB",
-        "price": 20,
+    const mediumCrate = {
+        "name": "Medium Crate",
+        "price": 200,
         "qty": 1,
         "type": "supply"
     }
 
-    const addOnA = {
-        "name": "Add-onA",
-        "price": 30,
+    const insurance = {
+        "name": "Insurance: $250,000",
+        "price": 300,
         "qty": 1,
         "type": "add-on"
     }
 
+    const distance = {
+        "name": "Distance: Within Davidson County",
+        "price": 0,
+        "qty": 1,
+        "type": "add-on"
+    }
 
-    const items = [itemA, itemB, itemC];
-    const supplies = [supplyA, supplyB];
-    const addOns = [addOnA];
+    const items = [itemA, itemB];
+    const supplies = [medPackingMaterial, mediumCrate];
+    const addOns = [insurance, distance];
 
     const cart = {
         "items": items,

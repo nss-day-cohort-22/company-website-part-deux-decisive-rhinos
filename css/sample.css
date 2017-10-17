@@ -19,6 +19,7 @@
 
 #table-items {
   grid-area: items;
+  align-self: start;
 }
 
 #table-total {
@@ -32,6 +33,22 @@
 /* Total */
 .sample-total {
   font-size: 2em;
+  margin-top: 15px;
+}
+
+#table-total {
+background-color: lightgray;
+}
+
+#table-total-footer {
+  padding-top: 50%;
+}
+
+#table-total-footer tr,
+#table-total-footer th,
+#table-total-footer td
+{
+  border: none;
 }
 
 /* Narrative */
@@ -110,10 +127,11 @@ table {
     
     .table-container {
       grid-template-rows: 3fr 1fr; 
-  grid-template-columns: repeat(3, 1fr);  
-  grid-gap: 20px;
-  grid-template-areas: 
-    "items supplies add-ons"
+      grid-template-columns: 1fr 1fr 1fr; 
+      padding: 25px;
+      grid-gap: 20px;
+      grid-template-areas: 
+    "supplies items add-ons"
     "total total total";
   }
 }   
