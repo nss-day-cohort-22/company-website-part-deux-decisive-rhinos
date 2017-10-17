@@ -1,11 +1,6 @@
 let infoButton = {
-<<<<<<< HEAD
-    "title": "Let us move your Rhinos Statues with Rhinos, Today",
-    "extra": "<button>Start the Party</button>",
-=======
     "title": "Let us move your Rhinos, Today",
     "extra": "buttonfunction1()",
->>>>>>> gt-addons
     "class": "buttonBox",
     "subclass": "buttonStyle" 
 }
