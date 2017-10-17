@@ -30,7 +30,7 @@ for (var i = 0; i < arrayOfProducts.length; i++) {
     itemContentEl.innerHTML += `
     <article class="item">
     
-    ${capitalizeFirstLetter(product.name)} item:
+    ${capitalizeFirstLetter(product.name)}:
     <p>Price: $${product.price}</p>
     <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
     <button class=button id="${product.name}-item">Add to Cart</button>
