@@ -2,7 +2,8 @@ const retrievedItems = JSON.parse(localStorage.getItem("itemsString"));
 console.log(retrievedItems);
 console.log(retrievedItems.description["items-description"])
 
-let itemsViewerEl = document.getElementById("items-viewer");
+let itemsHeaderEl = document.getElementById("items-header");
+let itemContentEl = document.getElementById("item-content");
 
 // function to capatilize the first letter of a string
 function capitalizeFirstLetter(string) {
@@ -11,17 +12,12 @@ function capitalizeFirstLetter(string) {
 
 
 // post description to article tag in html doc, one time, so no loop.
-
-itemsViewerEl.innerHTML += `
-<header class="item-header">
+itemsHeaderEl.innerHTML += `
     <h1> What Size Rhinocerus Statue Do You Need to Move?</h1>
     <p>${retrievedItems.description["items-description"]}</p>
-</header>
-<section id="item-content">
-</section> 
-`;
+`
 
-let itemContentEl = document.getElementById("item-content");
+
 
 
 // loop through array of items
