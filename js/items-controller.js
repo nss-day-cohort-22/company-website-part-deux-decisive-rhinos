@@ -7,6 +7,12 @@ console.log(retrievedItemsDatabase);
 // get control of container elements in items.html and assign to variables
 let itemsHeaderEl = document.getElementById("items-header");
 let itemContentEl = document.getElementById("item-content");
+let productGroup1 = document.getElementById("group1");
+let productGroup2 = document.getElementById("group2");
+let productGroup3 = document.getElementById("group3");
+let productGroup4 = document.getElementById("group4");
+let productGroup5 = document.getElementById("group5");
+
 
 // function to capatilize the first letter of a string
 function capitalizeFirstLetter(string) {
@@ -20,23 +26,67 @@ itemsHeaderEl.innerHTML += `
 `
 
 
+
 // loop through array of product items
 let arrayOfProducts = retrievedItemsDatabase.products;
 
-for (var i = 0; i < arrayOfProducts.length; i++) {
-    var product = arrayOfProducts[i];
+for (let i = 0; i < arrayOfProducts.length; i++) {
+    let product = arrayOfProducts[i];
     
     // setting html code to push into the items-content container
-    itemContentEl.innerHTML += `
+    // Making if/else statements to divide the group of 20 products into groups of 4, placed in separate html containers
+
+    if (i >= 0 && i <= 3) {
+    productGroup1.innerHTML += `
     <article class="item">
-    
     ${capitalizeFirstLetter(product.name)}:
     <p>Price: $${product.price}</p>
     <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
     <button class=button id="${product.name}-item">Add to Cart</button>
-    
     </article>
     `   
+    }
+    else if (i >= 4 && i <= 7) {
+    productGroup2.innerHTML += `
+    <article class="item">
+    ${capitalizeFirstLetter(product.name)}:
+    <p>Price: $${product.price}</p>
+    <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
+    <button class=button id="${product.name}-item">Add to Cart</button>
+    </article>
+    `   
+    }
+    else if (i >= 8 && i <= 11) {
+    productGroup3.innerHTML += `
+    <article class="item">
+    ${capitalizeFirstLetter(product.name)}:
+    <p>Price: $${product.price}</p>
+    <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
+    <button class=button id="${product.name}-item">Add to Cart</button>
+    </article>
+    `   
+    }
+    else if (i >= 12 && i <= 15) {
+    productGroup4.innerHTML += `
+    <article class="item">
+    ${capitalizeFirstLetter(product.name)}:
+    <p>Price: $${product.price}</p>
+    <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
+    <button class=button id="${product.name}-item">Add to Cart</button>
+    </article>
+    `   
+    }
+    else if (i >= 16 && i <= 20) {
+    productGroup5.innerHTML += `
+    <article class="item">
+    ${capitalizeFirstLetter(product.name)}:
+    <p>Price: $${product.price}</p>
+    <input type="number" name="${product.name}-item" size="4" class="num-input" id="${product.name}-item-quantity">
+    <button class=button id="${product.name}-item">Add to Cart</button>
+    </article>
+    `   
+    }
+
 }
 
 

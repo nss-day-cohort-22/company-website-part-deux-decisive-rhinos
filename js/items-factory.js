@@ -74,7 +74,7 @@
         "price": 40,
     }
     const rhino17 = {
-        "name": "rhino-7",
+        "name": "rhino-17",
         "price": 80,
     }
     const rhino18 = {

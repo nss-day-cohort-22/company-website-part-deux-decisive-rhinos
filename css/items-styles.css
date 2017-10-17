@@ -84,14 +84,18 @@ p {
     margin: .3em .2em;
 }
 
+#group1, #group2, #group3, #group4, #group5 {
+    border: 1px solid red;
+}
 
 
 
 
-/*  Disabling ALL media queries
+
+/*  Disabling ALL media queries */
 
 /* changes the items container layout from 2 columns to one column when the viewport is narrower than 900px */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     #item-content {
         width: 90%;
         max-width: 100%;
@@ -104,23 +108,23 @@ p {
 
     .items-header {
         margin-bottom: .8em;
-    }
+    } */
 
     /* enlarges each product item when stacked in one column and makes the size responsive to the viewport size */
-    .item {
+    /* .item {
         width: 100%;
         height: auto;
-    }
+    } */
 
     /* enlarges each product image when stacked in one column and makes the size responsive to the viewport size */
-    .item img {
+    /* .item img {
         width: 100%;
         height: auto;
     }    
-}
+} */
 
 /* decreases the font size in the item header and item content areas when the screen is narrower than 500px  */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .items-header h1 {
         font-size: 1.1em;
     }
@@ -132,4 +136,5 @@ p {
     .items-header {
         margin-bottom: .3em;
     }
-} */
+}
+ */
