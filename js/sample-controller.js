@@ -38,8 +38,6 @@ const getTotals = function(category) {
     return {"subTotals": subTotals, "total": total};
 }
 
-
-
 /*
     run this function to loop through the cart object
     and update the tables

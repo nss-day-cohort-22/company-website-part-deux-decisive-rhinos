@@ -1,0 +1,15 @@
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: gray;
+ }
+
+ #previousPage,
+ #nextPage {
+     text-decoration: none !important;
+ }
+ 
+ .hidden {
+     display: none;
+ }
