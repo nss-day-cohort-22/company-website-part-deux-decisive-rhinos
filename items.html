@@ -1,23 +1,48 @@
 <html>
     <head>
         <meta charset='utf-8'>
+        <!-- Need this meta tag for Chrome Dev tools device emulator to work -->
+        <meta name="viewport" content="width=device-width">
         <title>Moving Items</title>
         <link rel='stylesheet' href='./css/styles.css'>
         <link rel='stylesheet' href='./css/items-styles.css'>
+        
         
     </head>
     <body>
     <main class="main-global">
         <header class="header-global">
+                <nav>
+                    <ul id="nav" class="header-global">
+    
+                    </ul>
+                </nav>
         </header>    
         <section id="items-viewer">
-           
+            <header class="items-header" id="items-header">
+            </header>
+            <section id="item-content">
+                <section id="group1">
+                </section>
+                <section id="group2" class="hidden">
+                </section>
+                <section id="group3" class="hidden">
+                </section>
+                <section id="group4" class="hidden">
+                </section>
+                <section id="group5" class="hidden">
+                </section>
+                
+            </section> 
+
+
             
         </section>
         <footer class="footer-global">
         </footer>
     </main>
-
+    <script src="/js/nav-factory.js"></script>
+    <script src="/js/nav-controller.js"></script>
     <script src="/js/items-factory.js"></script>
     <script src="/js/items-controller.js"></script>
     </body>
