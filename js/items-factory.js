@@ -1,6 +1,7 @@
+// check to see if itemsDatabaseString already exists in local Storage
+
 if (localStorage.getItem("itemsDatabaseString") !== null) {
   // let items-controller.js file handle database that already exists    
-   
 } 
 else {
     // generate new items database
@@ -35,13 +36,16 @@ else {
         "items-description": "We will help you move a Rhinocerus Statue of any size. Just select the size and the number of statues you'd like to use below and we will help you."
     }
 
+    // push each product item into an array of items
     itemsArray.push(smallItem, mediumItem, largeItem, extraLargeItem);
+    // add the itemsArray to the items object
     items.items = itemsArray;
+    // add the description content to the items object
     items.description = description;
 
     // store items database in local storage
     let itemsString = JSON.stringify(items);
     localStorage.setItem("itemsString", itemsString);
 
-}
+} // end of else statement from checking if local storage exists, on or near line 6
 

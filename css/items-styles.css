@@ -1,68 +1,131 @@
-body {
-  
-}
 
+ 
+ 
+ 
+ /* sets main content area of items page to a grid with css grid. This container is set to 1 column and 2 rows; header & main. */
 #items-viewer {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 15px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 140px repeat(2, minmax(auto, 40%));
+    /* sets the number of columns to 1, spanning the full width of container */
+    grid-template-columns: 100%;
+    justify-items: center;
+    /* names and orders of the grid items */
     grid-template-areas: 
-    "header header"
-    "main main";
+    "header"
+    "main";   
 }
 
+.items-header {
+    grid-area: header;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* Sets the container that holds the individual items to a grid with 2 columns, each 50% of the size of the container */
+#item-content {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, minmax(auto, 50%));
+    grid-gap: .8em 3.5em;
+    
+}
+
+/* styling the add to cart button */
 .button {
-    padding: 6px 5px 4px 4px;
+    padding: 5px 5px 4px 4px;
     border: none;
     /* border: .5px solid rgba(238, 236, 236, 0.76); */
     border-radius: 7px;
-    background-color: rgba(255, 193, 87, 0.74);
+    background-color: #5f5855;
+    color: whitesmoke;
     font-size: .8em;
     -moz-box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
     -webkit-box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
     box-shadow: 1px 1px 5px rgba(36, 36, 36, 0.7);
-    
 }
 
+/* styling the input field of number of items */
 .num-input {
     width: 2.5em;
     border: 1px solid lightgrey;
     border-radius: 7px;
-    padding: 3px 2px 3px 8px;
+    padding: 2px 2px 3px 8px;
     font-size: 1em;
 }
 
-.header {
-    grid-area: header;
-    text-align: center;
-    
-}
-
+/* styling each product item container. */
 .item {
     background-color: lightgrey;
     border-radius: 8px;
-    padding: 5px 20px;
+    padding: 15px 20px 10px;
     margin: 5px auto;
     min-width: 15em; 
-    /* grid-area: main; */
+    
 }
 
+/* styling the images inside of each product item container */
 .item img {
     /* border: 3px solid rgba(130, 230, 248, 0.692);  */
     border-radius: 7px;
     margin: .2em;
     margin-bottom: .6em;
-
+  
 }
 
 .shadow {
     -moz-box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
     -webkit-box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
     box-shadow: 2px 2px 5px rgba(36, 36, 36, 0.7);
- }
+}
 
 p {
     margin: .3em .2em;
+}
+
+
+/* changes the items container layout from 2 columns to one column when the viewport is narrower than 900px */
+@media screen and (max-width: 900px) {
+    #item-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 10px auto 0;
+        display: grid;
+        grid-template-columns: 100%; 
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+    }
+
+    .items-header {
+        margin-bottom: .8em;
+    }
+
+    /* enlarges each product item when stacked in one column and makes the size responsive to the viewport size */
+    .item {
+        width: 100%;
+        height: auto;
+    }
+
+    /* enlarges each product image when stacked in one column and makes the size responsive to the viewport size */
+    .item img {
+        width: 100%;
+        height: auto;
+    }    
+}
+
+/* decreases the font size in the item header and item content areas when the screen is narrower than 500px  */
+@media screen and (max-width: 500px) {
+    .items-header h1 {
+        font-size: 1.1em;
+    }
+
+    .items-header p, .item p {
+        font-size: .9em;
+    }
+
+    .items-header {
+        margin-bottom: .3em;
+    }
 }
