@@ -7,6 +7,8 @@
         <link rel='stylesheet' href='./css/styles.css'>
         <link rel='stylesheet' href='./css/items-styles.css'>
         <link rel='stylesheet' href='./css/styles-index.css'>
+        <link rel='stylesheet' href='./css/pagination.css'>
+        
 
         
         
@@ -38,9 +40,15 @@
                 </section>
                 
             </section> 
-
-
-            
+            <div id="pagination">
+                    <a href="#" id="previousPage" onclick="loadPreviousPage();">&#x3c;</a>
+                    <a href="#" onclick="loadPage1();">1</a>
+                    <a href="#" class="inactiveLink" onclick="loadPage2();">2</a>
+                    <a href="#" onclick="loadPage3();">3</a>
+                    <a href="#" onclick="loadPage4();">4</a>
+                    <a href="#" onclick="loadPage5();">5</a>
+                    <a href="#" id="nextPage" onclick="loadNextPage();">&#x3e;</a>
+            </div>
         </section>
         <footer class="footer-global">
         </footer>
@@ -49,5 +57,6 @@
     <script src="/js/nav-controller.js"></script>
     <script src="/js/items-factory.js"></script>
     <script src="/js/items-controller.js"></script>
+    <script src="/js/pagination.js"></script>
     </body>
 </html>
