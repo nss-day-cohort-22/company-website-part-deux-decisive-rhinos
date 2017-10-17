@@ -1,16 +1,13 @@
-console.log('connected...');
-
 // an array of the divs to hide and show
 const itemContainer = document.getElementById("item-content").children;
 
 // go through and tag all the divs as hidden, except the num 
 // we want to show. 
 let showActiveProducts = function(num) {
-    console.log('productGroups: ', itemContainer.length);
+    
     for (var i = 0; i < itemContainer.length; i++) {
         var element = itemContainer[i];
         element.className = "hidden";
-        console.log(element);
         if (i===(num-1)) {
             element.className = "";
         }
@@ -90,7 +87,7 @@ let makeInactive = function(text) {
         let element = pagination[i];
         
         if (element.textContent === text) {
-            element.className = "inactiveLink";
+            element.className = "inactiveLink hidden";
         }
     }
 }
