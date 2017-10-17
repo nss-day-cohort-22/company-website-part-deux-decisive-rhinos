@@ -1,4 +1,4 @@
-//Create const named "supplyElement" to print supplies to the website.  The computer creates an empty array, therefore the index should start at [0] to ensure the file is read starting at the initial dom element created.  In this case, the class name "supplyInventory" I created on supplies.html
+//Create const named "supplyElement" to print html elements to the website.  The computer creates an empty array, therefore the index should start at [0] to ensure the file is read starting at the initial dom element created.  In this case, the class name is "supplyInventory" which I created on supplies.html
 const supplyElement = document.getElementsByClassName("supplyInventory")[0];
 
 /* --Start read data using JSON.parse-- */
@@ -6,22 +6,27 @@ const supplyElement = document.getElementsByClassName("supplyInventory")[0];
 //Create a constant named "storedSupplyInventory" to read data ("supplyInventory") in memory
 const storedSupplyInventory = localStorage.getItem("supplyInventory")
 
-//Create a variable named "supplies" to store the read data in "storedSupplyInventory"
+//Create a variable named "supplyObject" to store the read data in "storedSupplyInventory"
 let supplyObject = JSON.parse(storedSupplyInventory)
 
 /* --End read data using JSON.parse-- */
 
-//Create a "for in" loop to 
+//Create a "for in" loop to iterate thru the keys of the object stored in the variable "supplyObject"
 for(let key in supplyObject) {
 
-    console.log(key + ": " + supplyObject[key].length);
+    //This tests that the loop is reading the correct keys
+    console.log(key + ": " + supplyObject[key]);
 
+    //Define variable length because I didn't want to keep typing all that code
     let length = supplyObject[key].length;
 
-    for(i = 0; i < length; i++){
+    //Create a for loop nested within the "for in" loop to cycle through the multiple arrays held within the object "supplyObject"
+    for(i = 0; i < length; i++) {
 
+        //Create a variable named "currentSupply" that stores all property and property values of each array within the object "supplyObject"
         let currentSupply = supplyObject[key][i];
 
+        //This code appends additional html to the constant named "supplyElement" created earlier.
         supplyElement.innerHTML += currentSupply.name;
 
     }
