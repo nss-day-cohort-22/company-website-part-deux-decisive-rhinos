@@ -4,5 +4,23 @@
 const storedSupplyInventory = localStorage.getItem("supplyInventory")
 
 //Create a variable named "supplies" to store the read data in "storedSupplyInventory"
-let supplies = JSON.parse(storedSupplyInventory)
+let supplyObject = JSON.parse(storedSupplyInventory)
+
+
+//Create a 
+
+for(let key in supplyObject) {
+
+    console.log(key + ": " + supplyObject[key].length);
+
+    let length = supplyObject[key].length;
+
+    for(i = 0; i < length; i++){
+
+        console.log(supplyObject[key][i]);
+
+    }
+
+}
+
 
