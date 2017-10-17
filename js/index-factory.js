@@ -1,5 +1,7 @@
+/*create objects of index info*/
+
 let infoButton = {
-    "title": "<p class='standout'>Let us move your Rhinos, Today</p>",
+    "title": "<h1><p class='standout'>Let us move your Rhinos, Today</p></h1>",
     "extra": "buttonfunction1()",
     "class": "buttonBox",
     "subclass": "buttonStyle" 
