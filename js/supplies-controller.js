@@ -1,3 +1,6 @@
+//
+const supplyElement = document.getElementsByClassName("supplyInventory")[0];
+
 /* --Read data using JSON.parse-- */
 
 //Create a constant named "storedSupplyInventory" to read data ("supplyInventory") in memory
@@ -17,7 +20,9 @@ for(let key in supplyObject) {
 
     for(i = 0; i < length; i++){
 
-        console.log(supplyObject[key][i]);
+        let currentSupply = supplyObject[key][i];
+
+        supplyElement.innerHTML += currentSupply.name;
 
     }
 
