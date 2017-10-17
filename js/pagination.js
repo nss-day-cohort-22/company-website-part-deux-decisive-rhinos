@@ -87,7 +87,7 @@ let makeInactive = function(text) {
         let element = pagination[i];
         
         if (element.textContent === text) {
-            element.className = "inactiveLink hidden";
+            element.className = "inactiveLink invisible";
         }
     }
 }
