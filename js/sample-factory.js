@@ -1,57 +1,73 @@
 //const cart = JSON.parse(localStorage.getItem("cart"));
 
 //build shopping car
-//const cartExists = JSON.parse(localStorage.getItem("cart")) !== null;
-const cartExists = false;
+
+const cartExists = JSON.parse(localStorage.getItem("cart")) !== null;
+//const cartExists = false;
     
 if (cartExists){
-    console.log("cart exists");
+    //console.log("cart exists");
 } else {
 
     const itemA = {
-        "name": "MovingItemA",
-        "price": 10,
-        "qty": 1,
+        "name": "Small Rhino",
+        "price": 30,
+        "qty": 7,
         "type": "item"
     }
     const itemB = {
-        "name": "MovingItemB",
-        "price": 10,
+        "name": "Med Rhino",
+        "price": 75,
         "qty": 1,
         "type": "item"
     }
-    const itemC = {
-        "name": "MovingItemC",
-        "price": 10,
-        "qty": 1,
-        "type": "item"
-    }
+    
 
-    const supplyA = {
-        "name": "SupplyA",
-        "price": 20,
+    const medPackingMaterial = {
+        "name": "Med Packing Materials",
+        "price": 100,
         "qty": 1,
         "type": "supply"
     }
 
-    const supplyB = {
-        "name": "SupplyB",
-        "price": 20,
+    const smPackingMaterial = {
+        "name": "Small Packing Materials",
+        "price": 50,
+        "qty": 7,
+        "type": "supply"
+    }
+
+    const smallCrate = {
+        "name": "Small Crate",
+        "price": 100,
+        "qty": 7,
+        "type": "supply"
+    }
+
+    const mediumCrate = {
+        "name": "Medium Crate",
+        "price": 200,
         "qty": 1,
         "type": "supply"
     }
 
-    const addOnA = {
-        "name": "Add-onA",
-        "price": 30,
+    const insurance = {
+        "name": "Insurance: $250,000",
+        "price": 300,
         "qty": 1,
         "type": "add-on"
     }
 
+    const distance = {
+        "name": "Distance: Within Davidson County",
+        "price": 0,
+        "qty": 1,
+        "type": "add-on"
+    }
 
-    const items = [itemA, itemB, itemC];
-    const supplies = [supplyA, supplyB];
-    const addOns = [addOnA];
+    const items = [itemA, itemB];
+    const supplies = [smPackingMaterial, smallCrate, medPackingMaterial, mediumCrate];
+    const addOns = [insurance, distance];
 
     const cart = {
         "items": items,
@@ -64,4 +80,6 @@ if (cartExists){
 
 }
 
+// Narrative Elements
+const samplePageNarrative = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
 
