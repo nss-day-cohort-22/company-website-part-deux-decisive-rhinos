@@ -30,6 +30,20 @@ if (cartExists){
         "type": "supply"
     }
 
+    const smPackingMaterial = {
+        "name": "Small Packing Materials",
+        "price": 50,
+        "qty": 7,
+        "type": "supply"
+    }
+
+    const smallCrate = {
+        "name": "Small Crate",
+        "price": 100,
+        "qty": 7,
+        "type": "supply"
+    }
+
     const mediumCrate = {
         "name": "Medium Crate",
         "price": 200,
@@ -52,7 +66,7 @@ if (cartExists){
     }
 
     const items = [itemA, itemB];
-    const supplies = [medPackingMaterial, mediumCrate];
+    const supplies = [smPackingMaterial, smallCrate, medPackingMaterial, mediumCrate];
     const addOns = [insurance, distance];
 
     const cart = {

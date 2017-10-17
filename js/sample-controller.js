@@ -80,7 +80,7 @@ let getCaption = function(key) {
     let caption = key;
     switch (key) {
         case "items":
-            caption = "Items"
+            caption = "Items To Move"
             break;
         case "supplies":
             caption = "Supplies"

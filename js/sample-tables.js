@@ -28,9 +28,9 @@ function generateTable( tableMaker ) {
         <caption>${tableMaker.caption}</caption>
         <thead>
             <tr>
-            <th>name</th>
-            <th>qty</th>
-            <th>price</th>
+            <th>Name</th>
+            <th>Qty</th>
+            <th>Price</th>
             </tr>
         </thead>
         `;

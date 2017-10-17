@@ -34,10 +34,12 @@
 .sample-total {
   font-size: 2em;
   margin-top: 15px;
+
 }
 
 #table-total {
 background-color: lightgray;
+margin-bottom: 15px;
 }
 
 #table-total-footer {
