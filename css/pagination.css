@@ -13,3 +13,13 @@
  .hidden {
      display: none;
  }
+
+ .invisible {
+     visibility: hidden;
+ }
+
+ #pagination {
+    text-align: center; 
+    font-size: 1.25em;
+    margin: 0 auto;
+ }
