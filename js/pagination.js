@@ -62,10 +62,8 @@ let getActiveElement = () => {
     // do not look at the first and last element
     for (let i = 1; i < pagination.length-1; i++) {
         let element = pagination[i];
-        let text = element.textContentl
-        let isArrow = (text === "<" || text === ">");
-        
-        if (element.classList.contains("inactiveLink") && isArrow===false) {
+       
+        if (element.classList.contains("inactiveLink")) {
             active = element.textContent;
         }
     }
